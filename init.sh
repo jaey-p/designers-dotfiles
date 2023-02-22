@@ -2,18 +2,19 @@
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo add-apt-repository multiverse
 sudo add-apt-repository ppa:apt-fast/stable
-sudo apt update
-sudo apt upgrade
-sudo apt dist-upgrade
+sudo apt -y install apt-fast
+sudo apt-fast update
+sudo apt-fast upgrade
+sudo apt-fast dist-upgrade
 
 #Personalized Applications Download
-sudo apt install git unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip yadm neovim neovim-qt vim-gtk3 rsync rclone snapd flatpak qbittorrent flameshot wine-stable steam ubuntu-restricted-extras libavcodec-extra gnome-tweaks vlc blender 
+sudo apt-fast install git unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip yadm neovim neovim-qt vim-gtk3 rsync rclone snapd flatpak qbittorrent flameshot wine-stable steam ubuntu-restricted-extras libavcodec-extra gnome-tweaks vlc blender 
 sudo ubuntu-drivers autoinstall
-sudo apt install nvidia-driver-525
+sudo apt-fast install nvidia-driver-525
 
 # install the "whiptail" package if it's not already installed
 if ! dpkg -s whiptail >/dev/null 2>&1; then
-    sudo apt-get install -y whiptail
+    sudo apt-fast install -y whiptail
 fi
 
 #Personalized System Utils 
@@ -54,7 +55,7 @@ vim -E -c PlugInstall -c q
 #--- Personal Utils Config: ---
 
 #Install python and thefuck
-sudo apt install python3-dev python3-pip python3-setuptools
+sudo apt-fast install python3-dev python3-pip python3-setuptools
 sudo pip3 install thefuck
 
 # install pip essentials
