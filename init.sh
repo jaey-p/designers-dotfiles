@@ -1,7 +1,8 @@
 #Get things to the latest build
-sudo apt update
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo add-apt-repository multiverse
+sudo add-apt-repository ppa:apt-fast/stable
+sudo apt update
 sudo apt upgrade
 sudo apt dist-upgrade
 
@@ -29,7 +30,7 @@ case $CHOICE in
         curl -L git.io/antigen > ~/antigen.zsh
         antigen update
         #Config Dotfiles
-        yadm clone https://github.com/jazzhpatel/.dotfiles.git
+        #yadm clone https://github.com/jazzhpatel/.dotfiles.git
         sudo chsh -s /bin/zsh 
         zsh
         ;;
@@ -38,7 +39,7 @@ case $CHOICE in
         sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
         curl -L https://get.oh-my.fish > install && fish install --path=~/.local/share/omf --config=~/.config/omf
-        yadm clone https://github.com/jazzhpatel/.dotfiles.git
+        #yadm clone https://github.com/jazzhpatel/.dotfiles.git
         chsh -s /usr/local/bin/fish
         fish
         ;;
